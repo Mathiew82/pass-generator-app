@@ -1,0 +1,8 @@
+[package]
+name = "pass-generator-app"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+gtk4 = "0.10.3"
+rand = "0.9.2"
