@@ -50,7 +50,7 @@ fn display_ui() {
     );
 }
 
-fn check_ui(label: &Option) {
+fn check_ui(label: Option<&str>) -> CheckButton {
     let uppercase_check = CheckButton::new();
     uppercase_check.set_label(label);
     uppercase_check.add_css_class("check");
@@ -98,10 +98,11 @@ fn build_ui(app: &Application) {
     // ===============
 
     // === Options ===
-    let uppercase_check = check_ui(&Some("Mayúsculas"));
-    let lowercase_check = check_ui(&Some("Minúsculas"));
-    let numbers_check = check_ui(&Some("Números"));
-    let symbols_check = check_ui(&Some("Símbolos"));
+    let uppercase_check = check_ui(Some("Mayúsculas"));
+    let lowercase_check = check_ui(Some("Minúsculas"));
+    let numbers_check = check_ui(Some("Números"));
+    // numbers_check.set_halign(gtk4::Align::End);
+    let symbols_check = check_ui(Some("Símbolos"));
     // ===============
 
     // === Options Wrapper ===
