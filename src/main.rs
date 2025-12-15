@@ -1,6 +1,6 @@
 use gtk4::gdk::Display;
 use gtk4::{Align, prelude::*};
-use gtk4::{Application, ApplicationWindow, Box, Button, CheckButton, CssProvider, Label};
+use gtk4::{Application, ApplicationWindow, Box, Button, CheckButton, CssProvider, Image, Label};
 
 fn main() {
     let app = Application::builder()
@@ -16,7 +16,12 @@ fn display_ui() {
         .box-container {
             background-color: #1b2531;
             font-size: 16px;
-            padding: 20px;
+            padding: 10px 20px 20px 20px;
+        }
+        .logo {
+            min-width: 120px;
+            min-height: 120px;
+            margin-bottom: 10px;
         }
         .options-wrapper {
             margin: 20px 0;
@@ -61,6 +66,14 @@ fn display_ui() {
         &css_provider,
         gtk4::STYLE_PROVIDER_PRIORITY_APPLICATION,
     );
+}
+
+fn image_ui(path: &str, halign: Align, hexpand: bool) -> Image {
+    let image = Image::from_file(path);
+    image.set_halign(halign);
+    image.set_hexpand(hexpand);
+    image.add_css_class("logo");
+    image
 }
 
 fn label_ui(text: &str, xalign: f32, css_class: Option<&str>) -> Label {
@@ -129,6 +142,8 @@ fn build_ui(app: &Application) {
     display_ui();
     // ===============
 
+    let logo = image_ui("assets/logo.png", Align::Center, true);
+
     // === Header Text ===
     let box_header_text = label_ui("Contrasena Generada", 0.5, None);
     // ===================
@@ -143,6 +158,7 @@ fn build_ui(app: &Application) {
 
     // === Box Generated Password ===
     let box_generated_password = box_generated_password_ui();
+    box_generated_password.append(&logo);
     box_generated_password.append(&box_header_text);
     box_generated_password.append(&generated_password_text);
     // ==============================
