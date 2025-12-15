@@ -19,8 +19,10 @@ fn display_ui() {
             padding: 10px 20px 20px 20px;
         }
         .logo {
-            min-width: 120px;
-            min-height: 120px;
+            border: 6px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            min-width: 100px;
+            min-height: 100px;
             margin-bottom: 10px;
         }
         .options-wrapper {
@@ -34,8 +36,7 @@ fn display_ui() {
         }
         .generated-password-text {
             background-color: #0b1521;
-            border: 2px solid #2f66a2;
-            border-radius: 6px;
+            border: 1px solid #2f66a2;
             color: #aaaaaa;
             font-weight: normal;
             margin-top: 5px;
@@ -47,8 +48,8 @@ fn display_ui() {
         button.generate-button {
             background-color: #2f66a2;
             background-image: none;
-            border: 2px solid #5f96d2;
-            border-radius: 6px;
+            border: none;
+            border-radius: 0px;
             color: #f0f0f0;
             font-size: 16px;
             font-weight: bold;
@@ -211,6 +212,7 @@ fn build_ui(app: &Application) {
 
     // === Box Container ===
     let box_container = box_container_ui();
+    box_container.append(&box_header);
     box_container.append(&box_generated_password);
     box_container.append(&options_wrapper);
     box_container.append(&generate_button);
