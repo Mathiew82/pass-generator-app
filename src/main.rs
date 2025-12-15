@@ -91,6 +91,13 @@ fn label_ui(text: &str, xalign: f32, css_class: Option<&str>) -> Label {
     label
 }
 
+fn box_header_ui() -> Box {
+    let box_header = Box::new(gtk4::Orientation::Vertical, 0);
+    box_header.set_hexpand(true);
+    box_header.add_css_class("box-header");
+    box_header
+}
+
 fn box_generated_password_ui() -> Box {
     let box_generated_password = Box::new(gtk4::Orientation::Vertical, 0);
     box_generated_password.set_hexpand(true);
@@ -103,13 +110,6 @@ fn check_ui(label: &str) -> CheckButton {
     uppercase_check.set_label(Some(label));
     uppercase_check.add_css_class("check");
     uppercase_check
-}
-
-fn generate_button_ui() -> Button {
-    let button = Button::with_label("Generar");
-    button.set_hexpand(true);
-    button.add_css_class("generate-button");
-    button
 }
 
 fn options_left_column_ui() -> Box {
@@ -133,6 +133,13 @@ fn options_wrapper_ui() -> Box {
     options_wrapper
 }
 
+fn generate_button_ui() -> Button {
+    let button = Button::with_label("Generar");
+    button.set_hexpand(true);
+    button.add_css_class("generate-button");
+    button
+}
+
 fn box_container_ui() -> Box {
     let box_container = Box::new(gtk4::Orientation::Vertical, 0);
     box_container.set_hexpand(true);
@@ -145,7 +152,14 @@ fn build_ui(app: &Application) {
     display_ui();
     // ===============
 
+    // === Logo ===
     let logo = image_ui("assets/logo.png", Align::Center, true);
+    // ============
+
+    // === Box Header ===
+    let box_header = box_header_ui();
+    box_header.append(&logo);
+    // ==================
 
     // === Header Text ===
     let box_header_text = label_ui(
@@ -165,17 +179,19 @@ fn build_ui(app: &Application) {
 
     // === Box Generated Password ===
     let box_generated_password = box_generated_password_ui();
-    box_generated_password.append(&logo);
     box_generated_password.append(&box_header_text);
     box_generated_password.append(&generated_password_text);
     // ==============================
 
-    // === Options ===
+    // === Check Options ===
     let uppercase_check = check_ui("Mayúsculas");
     let lowercase_check = check_ui("Minúsculas");
     let numbers_check = check_ui("Números");
     let symbols_check = check_ui("Símbolos");
-    // ===============
+    uppercase_check.set_active(true);
+    lowercase_check.set_active(true);
+    numbers_check.set_active(true);
+    // =====================
 
     // === Options Wrapper ===
     let options_left_column = options_left_column_ui();
@@ -205,6 +221,7 @@ fn build_ui(app: &Application) {
         .application(app)
         .title("Pass Generator App")
         .default_width(500)
+        .resizable(false)
         .child(&box_container)
         .build();
     window.show();
