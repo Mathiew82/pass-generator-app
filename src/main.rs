@@ -1,6 +1,6 @@
 use gtk4::gdk::Display;
-use gtk4::prelude::*;
-use gtk4::{Application, ApplicationWindow, Box, Button, CheckButton, CssProvider};
+use gtk4::{Align, prelude::*};
+use gtk4::{Application, ApplicationWindow, Box, Button, CheckButton, CssProvider, Label};
 
 fn main() {
     let app = Application::builder()
@@ -21,6 +21,19 @@ fn display_ui() {
         .options-wrapper {
             margin: 20px 0;
         }
+        .label {
+            color: #f0f0f0;
+            font-weight: bold;
+        }
+        .generated-password-text {
+            background-color: #0b1521;
+            border: 2px solid #2f66a2;
+            border-radius: 8px;
+            color: #f0f0f0;
+            font-weight: normal;
+            margin-top: 10px;
+            padding: 10px;
+        }
         .check {
             color: #f0f0f0;
         }
@@ -32,7 +45,7 @@ fn display_ui() {
             color: #f0f0f0;
             font-size: 16px;
             padding: 10px;
-            transition: background-color 0.2s;
+            transition: background-color 0.1s;
         }
         button.generate-button:hover {
             background-color: #3f76b2;
@@ -50,9 +63,28 @@ fn display_ui() {
     );
 }
 
-fn check_ui(label: Option<&str>) -> CheckButton {
+fn label_ui(text: &str, xalign: f32, css_class: Option<&str>) -> Label {
+    let label = Label::new(Some(text));
+    label.set_hexpand(true);
+    label.set_halign(Align::Fill);
+    label.set_xalign(xalign);
+    label.add_css_class("label");
+    if let Some(class) = css_class {
+        label.add_css_class(class);
+    }
+    label
+}
+
+fn box_generated_password_ui() -> Box {
+    let box_generated_password = Box::new(gtk4::Orientation::Vertical, 0);
+    box_generated_password.set_hexpand(true);
+    box_generated_password.add_css_class("box-generated-password");
+    box_generated_password
+}
+
+fn check_ui(label: &str) -> CheckButton {
     let uppercase_check = CheckButton::new();
-    uppercase_check.set_label(label);
+    uppercase_check.set_label(Some(label));
     uppercase_check.add_css_class("check");
     uppercase_check
 }
@@ -97,12 +129,29 @@ fn build_ui(app: &Application) {
     display_ui();
     // ===============
 
+    // === Header Text ===
+    let box_header_text = label_ui("Contrasena Generada", 0.5, None);
+    // ===================
+
+    // === Generated Password Text ===
+    let generated_password_text = label_ui(
+        "LNDJ7zyDf8Q86RP+x=AJFu8bH$VsdsAA",
+        0.5,
+        Some("generated-password-text"),
+    );
+    // ===================
+
+    // === Box Generated Password ===
+    let box_generated_password = box_generated_password_ui();
+    box_generated_password.append(&box_header_text);
+    box_generated_password.append(&generated_password_text);
+    // ==============================
+
     // === Options ===
-    let uppercase_check = check_ui(Some("Mayúsculas"));
-    let lowercase_check = check_ui(Some("Minúsculas"));
-    let numbers_check = check_ui(Some("Números"));
-    // numbers_check.set_halign(gtk4::Align::End);
-    let symbols_check = check_ui(Some("Símbolos"));
+    let uppercase_check = check_ui("Mayúsculas");
+    let lowercase_check = check_ui("Minúsculas");
+    let numbers_check = check_ui("Números");
+    let symbols_check = check_ui("Símbolos");
     // ===============
 
     // === Options Wrapper ===
@@ -123,6 +172,7 @@ fn build_ui(app: &Application) {
 
     // === Box Container ===
     let box_container = box_container_ui();
+    box_container.append(&box_generated_password);
     box_container.append(&options_wrapper);
     box_container.append(&generate_button);
     // =====================
@@ -132,7 +182,6 @@ fn build_ui(app: &Application) {
         .application(app)
         .title("Pass Generator App")
         .default_width(500)
-        .default_height(500)
         .child(&box_container)
         .build();
     window.show();
