@@ -27,16 +27,18 @@ fn display_ui() {
             margin: 20px 0;
         }
         .label {
-            color: #f0f0f0;
             font-weight: bold;
+        }
+        .generated-password-header-text {
+            color: #f0f0f0;
         }
         .generated-password-text {
             background-color: #0b1521;
             border: 2px solid #2f66a2;
-            border-radius: 8px;
-            color: #f0f0f0;
+            border-radius: 6px;
+            color: #aaaaaa;
             font-weight: normal;
-            margin-top: 10px;
+            margin-top: 5px;
             padding: 10px;
         }
         .check {
@@ -46,9 +48,10 @@ fn display_ui() {
             background-color: #2f66a2;
             background-image: none;
             border: 2px solid #5f96d2;
-            border-radius: 8px;
+            border-radius: 6px;
             color: #f0f0f0;
             font-size: 16px;
+            font-weight: bold;
             padding: 10px;
             transition: background-color 0.1s;
         }
@@ -145,7 +148,11 @@ fn build_ui(app: &Application) {
     let logo = image_ui("assets/logo.png", Align::Center, true);
 
     // === Header Text ===
-    let box_header_text = label_ui("Contrasena Generada", 0.5, None);
+    let box_header_text = label_ui(
+        "Contraseña generada",
+        0.5,
+        Some("generated-password-header-text"),
+    );
     // ===================
 
     // === Generated Password Text ===
