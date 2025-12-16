@@ -1,6 +1,9 @@
+use crate::ui::state::{AppState, SharedState};
 use crate::ui::styles::display_ui;
 use gtk4::prelude::*;
 use gtk4::{Align, Application, ApplicationWindow, Box, Button, CheckButton, Image, Label};
+use std::cell::RefCell;
+use std::rc::Rc;
 
 fn image_ui(path: &str, halign: Align, hexpand: bool) -> Image {
     let image = Image::from_file(path);
@@ -78,7 +81,7 @@ fn box_container_ui() -> Box {
     box_container
 }
 
-pub fn build_ui(app: &Application) {
+pub fn build_ui(app: &Application) -> SharedState {
     // === Display ===
     display_ui();
     // ===============
@@ -106,7 +109,7 @@ pub fn build_ui(app: &Application) {
         0.5,
         Some("generated-password-text"),
     );
-    // ===================
+    // ===============================
 
     // === Box Generated Password ===
     let box_generated_password = box_generated_password_ui();
@@ -157,5 +160,16 @@ pub fn build_ui(app: &Application) {
         .child(&box_container)
         .build();
     window.show();
+    // ==============
+
+    // === Return ===
+    Rc::new(RefCell::new(AppState {
+        generate_button,
+        uppercase_check,
+        lowercase_check,
+        numbers_check,
+        symbols_check,
+        generated_password_text,
+    }))
     // ==============
 }
