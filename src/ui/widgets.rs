@@ -1,5 +1,6 @@
 use gtk4::prelude::*;
 use gtk4::{Align, Box, Button, CheckButton, Image, Label};
+use crate::ui::texts::*;
 
 pub fn image_ui(path: &str, halign: Align, hexpand: bool) -> Image {
     let image = Image::from_file(path);
@@ -64,7 +65,7 @@ pub fn options_wrapper_ui() -> Box {
 }
 
 pub fn generate_button_ui() -> Button {
-    let button = Button::with_label("Generar");
+    let button = Button::with_label(GENERATE_BUTTON_LABEL);
     button.set_hexpand(true);
     button.add_css_class("generate-button");
     button

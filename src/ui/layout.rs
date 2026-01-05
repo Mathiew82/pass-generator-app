@@ -1,6 +1,7 @@
 use crate::ui::state::{AppState, SharedState};
 use crate::ui::styles::display_ui;
 use crate::ui::widgets::*;
+use crate::ui::texts::*;
 use gtk4::prelude::*;
 use gtk4::{Align, Application, ApplicationWindow};
 use std::cell::RefCell;
@@ -15,7 +16,7 @@ pub fn build_ui(app: &Application) -> SharedState {
     box_header.append(&logo);
 
     let box_header_text = label_ui(
-        "Contraseña generada",
+        GENERATED_PASSWORD_TITLE,
         0.5,
         Some("generated-password-header-text"),
     );
@@ -30,10 +31,10 @@ pub fn build_ui(app: &Application) -> SharedState {
     box_generated_password.append(&box_header_text);
     box_generated_password.append(&generated_password_text);
 
-    let uppercase_check = check_ui("Mayúsculas");
-    let lowercase_check = check_ui("Minúsculas");
-    let numbers_check = check_ui("Números");
-    let symbols_check = check_ui("Símbolos");
+    let uppercase_check = check_ui(CHECK_UPPERCASE);
+    let lowercase_check = check_ui(CHECK_LOWERCASE);
+    let numbers_check = check_ui(CHECK_NUMBERS);
+    let symbols_check = check_ui(CHECK_SYMBOLS);
     uppercase_check.set_active(true);
     lowercase_check.set_active(true);
     numbers_check.set_active(true);
@@ -58,7 +59,7 @@ pub fn build_ui(app: &Application) -> SharedState {
 
     let window = ApplicationWindow::builder()
         .application(app)
-        .title("Pass Generator App")
+        .title(APP_TITLE)
         .default_width(500)
         .resizable(false)
         .child(&box_container)
