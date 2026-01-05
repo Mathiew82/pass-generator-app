@@ -1,3 +1,5 @@
+mod password;
+
 use crate::ui::state::SharedState;
 use gtk4::prelude::*;
 
@@ -7,7 +9,7 @@ pub fn connect_logic(state: SharedState) {
     state.borrow().generate_button.connect_clicked(move |_| {
         let state = state_clone.borrow();
 
-        let password = generate_password(
+        let password = password::generate_password(
             state.uppercase_check.is_active(),
             state.lowercase_check.is_active(),
             state.numbers_check.is_active(),
@@ -16,12 +18,4 @@ pub fn connect_logic(state: SharedState) {
 
         state.generated_password_text.set_text(&password);
     });
-}
-
-fn generate_password(uppercase: bool, lowercase: bool, numbers: bool, symbols: bool) -> String {
-    println!("uppercase: {}", uppercase);
-    println!("lowercase: {}", lowercase);
-    println!("numbers: {}", numbers);
-    println!("symbols: {}", symbols);
-    "Ejemplo123!".to_string()
 }
