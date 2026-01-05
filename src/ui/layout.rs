@@ -17,8 +17,8 @@ pub fn build_ui(app: &Application) {
     box_header.append(&logo);
 
     let generate_button = generate_button_ui();
-    let generated = generated_password::build();
     let options = options_panel::build();
+    let generated = generated_password::build();
 
     controller::connect_generate_button(
         &generate_button,
