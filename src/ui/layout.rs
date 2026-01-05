@@ -2,8 +2,11 @@ use crate::ui::state::{AppState, SharedState};
 use crate::ui::styles::display_ui;
 use crate::ui::widgets::*;
 use crate::ui::texts::*;
+use crate::ui::components::generated_password;
+
 use gtk4::prelude::*;
 use gtk4::{Align, Application, ApplicationWindow};
+
 use std::cell::RefCell;
 use std::rc::Rc;
 
@@ -15,21 +18,7 @@ pub fn build_ui(app: &Application) -> SharedState {
     let box_header = box_header_ui();
     box_header.append(&logo);
 
-    let box_header_text = label_ui(
-        GENERATED_PASSWORD_TITLE,
-        0.5,
-        Some("generated-password-header-text"),
-    );
-
-    let generated_password_text = label_ui(
-        "LNDJ7zyDf8Q86RP+x=AJFu8bH$VsdsAA",
-        0.5,
-        Some("generated-password-text"),
-    );
-
-    let box_generated_password = box_generated_password_ui();
-    box_generated_password.append(&box_header_text);
-    box_generated_password.append(&generated_password_text);
+    let generated = generated_password::build();
 
     let uppercase_check = check_ui(CHECK_UPPERCASE);
     let lowercase_check = check_ui(CHECK_LOWERCASE);
@@ -53,7 +42,7 @@ pub fn build_ui(app: &Application) -> SharedState {
 
     let box_container = box_container_ui();
     box_container.append(&box_header);
-    box_container.append(&box_generated_password);
+    box_container.append(&generated.root);
     box_container.append(&options_wrapper);
     box_container.append(&generate_button);
 
@@ -72,6 +61,6 @@ pub fn build_ui(app: &Application) -> SharedState {
         lowercase_check,
         numbers_check,
         symbols_check,
-        generated_password_text,
+        generated_password_text: generated.value_label,
     }))
 }
