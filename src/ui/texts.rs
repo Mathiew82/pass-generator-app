@@ -6,3 +6,4 @@ pub const CHECK_UPPERCASE: &str = "Mayúsculas";
 pub const CHECK_LOWERCASE: &str = "Minúsculas";
 pub const CHECK_NUMBERS: &str = "Números";
 pub const CHECK_SYMBOLS: &str = "Símbolos";
+pub const LENGTH: &str = "Longitud";

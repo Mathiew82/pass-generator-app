@@ -5,6 +5,7 @@ use crate::logic::state::PasswordOptions;
 
 pub fn connect_generate_button(
     generate_button: &gtk4::Button,
+    length_spin: &gtk4::SpinButton,
     uppercase_check: &gtk4::CheckButton,
     lowercase_check: &gtk4::CheckButton,
     numbers_check: &gtk4::CheckButton,
@@ -17,10 +18,11 @@ pub fn connect_generate_button(
     let numbers_check = numbers_check.clone();
     let symbols_check = symbols_check.clone();
     let output_label = output_label.clone();
+    let length_spin = length_spin.clone();
 
     generate_button.connect_clicked(move |_| {
         let opts = PasswordOptions {
-            length: 16,
+            length: length_spin.value() as usize,
             uppercase: uppercase_check.is_active(),
             lowercase: lowercase_check.is_active(),
             numbers: numbers_check.is_active(),

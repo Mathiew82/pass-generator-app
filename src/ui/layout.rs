@@ -22,6 +22,7 @@ pub fn build_ui(app: &Application) {
 
     controller::connect_generate_button(
         &generate_button,
+        &options.length_spin,
         &options.uppercase_check,
         &options.lowercase_check,
         &options.numbers_check,

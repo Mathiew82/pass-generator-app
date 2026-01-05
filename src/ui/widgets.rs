@@ -1,5 +1,5 @@
 use gtk4::prelude::*;
-use gtk4::{Align, Box, Button, CheckButton, Image, Label};
+use gtk4::{Adjustment, Align, Box, Button, CheckButton, Image, Label, SpinButton};
 
 use crate::ui::texts::*;
 
@@ -35,6 +35,13 @@ pub fn check_ui(label: &str) -> CheckButton {
     uppercase_check.set_label(Some(label));
     uppercase_check.add_css_class("check");
     uppercase_check
+}
+
+pub fn length_spin_ui() -> SpinButton {
+    let adj = Adjustment::new(16.0, 4.0, 32.0, 1.0, 1.0, 0.0);
+    let spin = SpinButton::new(Some(&adj), 1.0, 0);
+    spin.set_hexpand(true);
+    spin
 }
 
 pub fn options_left_column_ui() -> Box {

@@ -9,7 +9,6 @@ pub fn display_ui() {
     CSS_LOADED.get_or_init(|| {
         let css = r#"
             .box-container {
-                background-color: #1b2531;
                 font-size: 16px;
                 padding: 10px 20px 20px 20px;
             }
@@ -27,29 +26,28 @@ pub fn display_ui() {
                 font-weight: bold;
             }
             .generated-password-header-text {
-                color: #f0f0f0;
+                color: black;
             }
             .generated-password-text {
-                background-color: #0b1521;
-                border: 1px solid #2f66a2;
-                color: #aaaaaa;
+                background-color: #f0f0f0;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 6px;
                 font-weight: normal;
                 margin-top: 5px;
                 padding: 10px;
             }
             .check {
-                color: #f0f0f0;
+                color: black;
+            }
+            .spin-label {
+                color: black;
+                margin-top: 15px;
+                margin-bottom: 5px;
             }
             button.generate-button {
-                background-color: #2f66a2;
-                background-image: none;
-                border: none;
-                border-radius: 0px;
-                color: #f0f0f0;
                 font-size: 16px;
                 font-weight: bold;
                 padding: 10px;
-                transition: background-color 0.1s;
             }
             button.generate-button:hover {
                 background-color: #3f76b2;
