@@ -20,6 +20,7 @@ pub fn connect_generate_button(
 
     generate_button.connect_clicked(move |_| {
         let opts = PasswordOptions {
+            length: 16,
             uppercase: uppercase_check.is_active(),
             lowercase: lowercase_check.is_active(),
             numbers: numbers_check.is_active(),
