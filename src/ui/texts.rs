@@ -1,5 +1,6 @@
 pub const APP_TITLE: &str = "Pass Generator App";
 pub const GENERATED_PASSWORD_TITLE: &str = "Contraseña generada";
+pub const GENERATED_PASSWORD_PLACEHOLDER: &str = "Pulsa Generar para crear una contraseña";
 pub const GENERATE_BUTTON_LABEL: &str = "Generar contraseña";
 pub const CHECK_UPPERCASE: &str = "Mayúsculas";
 pub const CHECK_LOWERCASE: &str = "Minúsculas";

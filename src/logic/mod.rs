@@ -1,7 +1,8 @@
 mod password;
 
-use crate::ui::state::SharedState;
 use gtk4::prelude::*;
+
+use crate::ui::state::SharedState;
 
 pub fn connect_logic(state: SharedState) {
     let state_clone = state.clone();

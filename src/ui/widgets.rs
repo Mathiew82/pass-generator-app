@@ -1,5 +1,6 @@
 use gtk4::prelude::*;
 use gtk4::{Align, Box, Button, CheckButton, Image, Label};
+
 use crate::ui::texts::*;
 
 pub fn image_ui(path: &str, halign: Align, hexpand: bool) -> Image {
@@ -27,13 +28,6 @@ pub fn box_header_ui() -> Box {
     box_header.set_hexpand(true);
     box_header.add_css_class("box-header");
     box_header
-}
-
-pub fn box_generated_password_ui() -> Box {
-    let box_generated_password = Box::new(gtk4::Orientation::Vertical, 0);
-    box_generated_password.set_hexpand(true);
-    box_generated_password.add_css_class("box-generated-password");
-    box_generated_password
 }
 
 pub fn check_ui(label: &str) -> CheckButton {

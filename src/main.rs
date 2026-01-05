@@ -1,8 +1,8 @@
-use gtk4::Application;
-use gtk4::prelude::*;
-
 mod logic;
 mod ui;
+
+use gtk4::Application;
+use gtk4::prelude::*;
 
 fn main() {
     let app = Application::builder()

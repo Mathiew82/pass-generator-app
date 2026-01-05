@@ -1,6 +1,7 @@
-use std::sync::OnceLock;
 use gtk4::CssProvider;
 use gtk4::gdk::Display;
+
+use std::sync::OnceLock;
 
 static CSS_LOADED: OnceLock<()> = OnceLock::new();
 
