@@ -10,8 +10,7 @@ fn main() {
         .build();
 
     app.connect_activate(|app| {
-        let state = ui::layout::build_ui(app);
-        logic::connect_logic(state);
+        ui::layout::build_ui(app);
     });
 
     app.run();
