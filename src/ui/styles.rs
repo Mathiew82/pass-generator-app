@@ -39,6 +39,15 @@ pub fn display_ui() {
             .check {
                 color: black;
             }
+            checkbutton check {
+                border-color: #555555;
+            }
+            checkbutton check:checked {
+                background: #2f6682;
+            }
+            checkbutton {
+                color: #f0f0f0;
+            }
             .spin-label {
                 color: black;
                 margin-top: 15px;
