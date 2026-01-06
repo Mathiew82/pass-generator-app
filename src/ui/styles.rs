@@ -29,7 +29,7 @@ pub fn display_ui() {
                 color: black;
             }
             .generated-password-text {
-                background-color: #00f;
+                background-color: #f0f0f0;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 6px;
                 font-weight: 600;

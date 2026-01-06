@@ -3,17 +3,30 @@ use gtk4::prelude::*;
 use crate::logic::password;
 use crate::logic::feedback;
 use crate::logic::state::PasswordOptions;
+use crate::ui::texts::GENERATED_PASSWORD_PLACEHOLDER;
 
 pub fn connect_copy_button(copy_button: &gtk4::Button, password_label: &gtk4::Label) {
-    let copy_button = copy_button.clone();
-    let password_label = password_label.clone();
+    let btn = copy_button.clone();
+    let label = password_label.clone();
 
     copy_button.connect_clicked(move |_| {
-        let text = password_label.text().to_string();
+        let text = label.text().to_string();
+
+        if text == GENERATED_PASSWORD_PLACEHOLDER {
+            return;
+        }
 
         if let Some(display) = gtk4::gdk::Display::default() {
             display.clipboard().set_text(&text);
         }
+
+        btn.set_label("Copiado ✅");
+
+        let btn_reset = btn.clone();
+        glib::timeout_add_seconds_local(1, move || {
+            btn_reset.set_label("Copiar");
+            glib::ControlFlow::Break
+        });
     });
 }
 
