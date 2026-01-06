@@ -12,7 +12,7 @@ use gtk4::{Align, Application, ApplicationWindow};
 pub fn build_ui(app: &Application) {
     display_ui();
 
-    let logo = image_ui("assets/logo.png", Align::Center, true);
+    let logo = image_ui(Align::Center, true);
 
     let box_header = box_header_ui();
     box_header.append(&logo);

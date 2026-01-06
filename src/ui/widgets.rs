@@ -1,10 +1,19 @@
 use gtk4::prelude::*;
 use gtk4::{Adjustment, Align, Box, Button, CheckButton, Image, Label, SpinButton};
+use gtk4::gdk_pixbuf::PixbufLoader;
 
 use crate::ui::texts::*;
 
-pub fn image_ui(path: &str, halign: Align, hexpand: bool) -> Image {
-    let image = Image::from_file(path);
+pub fn image_ui(halign: Align, hexpand: bool) -> Image {
+    let bytes = include_bytes!("../../assets/logo.png");
+
+    let loader = PixbufLoader::new();
+    loader.write(bytes).expect("Failed to read logo bytes");
+    loader.close().expect("Failed to close PixbufLoader");
+
+    let pixbuf = loader.pixbuf().expect("Failed to decode logo");
+    let image = Image::from_pixbuf(Some(&pixbuf));
+
     image.set_halign(halign);
     image.set_hexpand(hexpand);
     image.add_css_class("logo");
