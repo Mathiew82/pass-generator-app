@@ -29,11 +29,15 @@ pub fn display_ui() {
                 color: black;
             }
             .generated-password-text {
-                background-color: #f0f0f0;
+                background-color: #00f;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 6px;
                 font-weight: 600;
                 margin-top: 5px;
+                padding: 10px;
+            }
+            .copy-button {
+                font-weight: 600;
                 padding: 10px;
             }
             .check {

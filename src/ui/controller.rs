@@ -4,6 +4,19 @@ use crate::logic::password;
 use crate::logic::feedback;
 use crate::logic::state::PasswordOptions;
 
+pub fn connect_copy_button(copy_button: &gtk4::Button, password_label: &gtk4::Label) {
+    let copy_button = copy_button.clone();
+    let password_label = password_label.clone();
+
+    copy_button.connect_clicked(move |_| {
+        let text = password_label.text().to_string();
+
+        if let Some(display) = gtk4::gdk::Display::default() {
+            display.clipboard().set_text(&text);
+        }
+    });
+}
+
 pub fn connect_generate_button(
     generate_button: &gtk4::Button,
     length_spin: &gtk4::SpinButton,

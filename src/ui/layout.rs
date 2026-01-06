@@ -22,6 +22,11 @@ pub fn build_ui(app: &Application) {
     let generated = generated_password::build();
     let feedback = security_feedback::build();
 
+    controller::connect_copy_button(
+        &generated.copy_button,
+        &generated.value_label
+    );
+
     controller::connect_generate_button(
         &generate_button,
         &options.length_spin,
