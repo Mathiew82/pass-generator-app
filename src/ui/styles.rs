@@ -53,6 +53,13 @@ pub fn display_ui() {
                 margin-top: 15px;
                 margin-bottom: 5px;
             }
+            .box-security-feedback {
+                margin-top: 5px;
+                margin-bottom: 15px;
+            }
+            .security-low { color: #aa0000; }
+            .security-medium { color: #aa5500; }
+            .security-high { color: #009955; }
             button.generate-button {
                 font-size: 16px;
                 font-weight: bold;

@@ -4,6 +4,7 @@ use crate::ui::texts::*;
 use crate::ui::controller;
 use crate::ui::components::generated_password;
 use crate::ui::components::options_panel;
+use crate::ui::components::security_feedback;
 
 use gtk4::prelude::*;
 use gtk4::{Align, Application, ApplicationWindow};
@@ -19,6 +20,7 @@ pub fn build_ui(app: &Application) {
     let generate_button = generate_button_ui();
     let options = options_panel::build();
     let generated = generated_password::build();
+    let feedback = security_feedback::build();
 
     controller::connect_generate_button(
         &generate_button,
@@ -28,12 +30,14 @@ pub fn build_ui(app: &Application) {
         &options.numbers_check,
         &options.symbols_check,
         &generated.value_label,
+        &feedback.value_label,
     );
 
     let box_container = box_container_ui();
     box_container.append(&box_header);
     box_container.append(&generated.root);
     box_container.append(&options.root);
+    box_container.append(&feedback.root);
     box_container.append(&generate_button);
 
     let window = ApplicationWindow::builder()
