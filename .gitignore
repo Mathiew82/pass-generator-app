@@ -1,4 +1,5 @@
 /target
+/dist
 
 PassGenerator.AppDir/
 Pass_Generator_App-x86_64.AppImage
