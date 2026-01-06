@@ -25,6 +25,7 @@ pub fn build() -> GeneratedPasswordComponent {
 
     let row = Box::new(gtk4::Orientation::Horizontal, 10);
     row.set_hexpand(true);
+    row.add_css_class("box-label-button");
     row.append(&value_label);
     row.append(&copy_button);
 

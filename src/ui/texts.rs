@@ -10,4 +10,4 @@ pub const LENGTH: &str = "Longitud";
 pub const LOW_SECURITY: &str = "Seguridad baja";
 pub const MEDIUM_SECURITY: &str = "Seguridad media";
 pub const HIGH_SECURITY: &str = "Seguridad alta";
-pub const PLACEHOLDER_SECURITY: &str = "-";
+pub const PLACEHOLDER_SECURITY: &str = "";

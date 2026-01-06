@@ -17,10 +17,11 @@ pub fn display_ui() {
                 border-radius: 50%;
                 min-width: 100px;
                 min-height: 100px;
-                margin-bottom: 10px;
+                margin-top: 5px;
+                margin-bottom: 20px;
             }
             .options-wrapper {
-                margin: 20px 0;
+                margin: 10px 0 20px 0;
             }
             .label {
                 font-weight: bold;
@@ -28,17 +29,18 @@ pub fn display_ui() {
             .generated-password-header-text {
                 color: black;
             }
-            .generated-password-text {
-                background-color: #f0f0f0;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                border-radius: 6px;
-                font-weight: 600;
+            .box-label-button {
                 margin-top: 5px;
-                padding: 10px;
+            }
+            .generated-password-text {
+                background-color: #ffffff;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 5px;
+                padding: 6px;
             }
             .copy-button {
-                font-weight: 600;
-                padding: 10px;
+                background-color: #ffffff;
+                padding: 6px 12px;
             }
             .check {
                 color: black;
@@ -62,9 +64,7 @@ pub fn display_ui() {
             }
             .security-feedback-text {
                 background-color: #f0f0f0;
-                border: 1px solid rgba(0, 0, 0, 0.2);
-                border-radius: 6px;
-                font-weight: 600;
+                border-radius: 5px;
                 padding: 5px 10px;
             }
             .security-low { color: #880000; }
