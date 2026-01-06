@@ -32,7 +32,7 @@ pub fn display_ui() {
                 background-color: #f0f0f0;
                 border: 1px solid rgba(0, 0, 0, 0.2);
                 border-radius: 6px;
-                font-weight: normal;
+                font-weight: 600;
                 margin-top: 5px;
                 padding: 10px;
             }
@@ -54,12 +54,18 @@ pub fn display_ui() {
                 margin-bottom: 5px;
             }
             .box-security-feedback {
-                margin-top: 5px;
-                margin-bottom: 15px;
+                margin-top: 10px;
             }
-            .security-low { color: #aa0000; }
-            .security-medium { color: #aa5500; }
-            .security-high { color: #009955; }
+            .security-feedback-text {
+                background-color: #f0f0f0;
+                border: 1px solid rgba(0, 0, 0, 0.2);
+                border-radius: 6px;
+                font-weight: 600;
+                padding: 5px 10px;
+            }
+            .security-low { color: #880000; }
+            .security-medium { color: #774400; }
+            .security-high { color: #008833; }
             button.generate-button {
                 font-size: 16px;
                 font-weight: bold;

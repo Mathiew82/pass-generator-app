@@ -1,6 +1,6 @@
 pub const APP_TITLE: &str = "Pass Generator App";
 pub const GENERATED_PASSWORD_TITLE: &str = "Contraseña generada";
-pub const GENERATED_PASSWORD_PLACEHOLDER: &str = "Pulsa Generar contraseña para crear una nueva";
+pub const GENERATED_PASSWORD_PLACEHOLDER: &str = "-";
 pub const GENERATE_BUTTON_LABEL: &str = "Generar contraseña";
 pub const CHECK_UPPERCASE: &str = "Mayúsculas";
 pub const CHECK_LOWERCASE: &str = "Minúsculas";
@@ -11,4 +11,3 @@ pub const LOW_SECURITY: &str = "Seguridad baja";
 pub const MEDIUM_SECURITY: &str = "Seguridad media";
 pub const HIGH_SECURITY: &str = "Seguridad alta";
 pub const PLACEHOLDER_SECURITY: &str = "-";
-pub const SECURITY_FEEDBACK_HEADER: &str = "Seguridad de la contraseña";

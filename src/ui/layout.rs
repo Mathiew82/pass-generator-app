@@ -36,8 +36,8 @@ pub fn build_ui(app: &Application) {
     let box_container = box_container_ui();
     box_container.append(&box_header);
     box_container.append(&generated.root);
-    box_container.append(&options.root);
     box_container.append(&feedback.root);
+    box_container.append(&options.root);
     box_container.append(&generate_button);
 
     let window = ApplicationWindow::builder()
