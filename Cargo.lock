@@ -463,6 +463,7 @@ dependencies = [
 name = "pass-generator-app"
 version = "0.1.0"
 dependencies = [
+ "gdk-pixbuf",
  "gtk4",
  "rand",
 ]
