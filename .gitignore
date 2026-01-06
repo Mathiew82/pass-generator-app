@@ -1,1 +1,6 @@
 /target
+
+PassGenerator.AppDir/
+Pass_Generator_App-x86_64.AppImage
+Pass_Generator_App-x86_64.AppImage.sig
+pass-generator-app.desktop
