@@ -2,7 +2,6 @@ use gtk4::prelude::*;
 use gtk4::{Box, Label};
 
 use crate::ui::widgets::label_ui;
-use crate::ui::texts::{PLACEHOLDER_SECURITY};
 
 pub struct SecurityFeedbackComponent {
     pub root: Box,
@@ -11,7 +10,7 @@ pub struct SecurityFeedbackComponent {
 
 pub fn build() -> SecurityFeedbackComponent {
     let value_label = label_ui(
-        PLACEHOLDER_SECURITY,
+        "",
         0.5,
         Some("security-feedback-text"),
     );
