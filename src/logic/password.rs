@@ -1,10 +1,10 @@
-use rand::prelude::*;
 use crate::logic::state::PasswordOptions;
+use rand::prelude::*;
 
 const UPPER: &[u8] = b"ABCDEFGHJKLMNPQRTUVWXYZ";
 const LOWER: &[u8] = b"abcdefghjkmnpqrstuvwxyz";
-const NUM:   &[u8] = b"2346789";
-const SYM:   &[u8] = b"!@#$%&*()-_=+[]{}?/";
+const NUM: &[u8] = b"2346789";
+const SYM: &[u8] = b"!@#$%&*()-_=+[]{}?/";
 
 pub fn generate_password(opts: PasswordOptions) -> String {
     if opts.length == 0 {
@@ -12,10 +12,18 @@ pub fn generate_password(opts: PasswordOptions) -> String {
     }
 
     let mut sets: Vec<&[u8]> = Vec::new();
-    if opts.uppercase { sets.push(UPPER); }
-    if opts.lowercase { sets.push(LOWER); }
-    if opts.numbers   { sets.push(NUM); }
-    if opts.symbols   { sets.push(SYM); }
+    if opts.uppercase {
+        sets.push(UPPER);
+    }
+    if opts.lowercase {
+        sets.push(LOWER);
+    }
+    if opts.numbers {
+        sets.push(NUM);
+    }
+    if opts.symbols {
+        sets.push(SYM);
+    }
 
     if sets.is_empty() {
         return String::new();

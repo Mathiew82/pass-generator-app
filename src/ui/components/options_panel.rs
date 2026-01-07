@@ -1,9 +1,9 @@
 use gtk4::prelude::*;
 use gtk4::{Box, CheckButton};
 
-use crate::ui::widgets::length_spin_ui;
-use crate::ui::widgets::label_ui;
 use crate::ui::texts::{CHECK_LOWERCASE, CHECK_NUMBERS, CHECK_SYMBOLS, CHECK_UPPERCASE, LENGTH};
+use crate::ui::widgets::label_ui;
+use crate::ui::widgets::length_spin_ui;
 use crate::ui::widgets::{
     check_ui, options_left_column_ui, options_right_column_ui, options_wrapper_ui,
 };

@@ -11,7 +11,11 @@ pub struct GeneratedPasswordComponent {
 }
 
 pub fn build() -> GeneratedPasswordComponent {
-    let header = label_ui(GENERATED_PASSWORD_TITLE, 0.5, Some("generated-password-header-text"));
+    let header = label_ui(
+        GENERATED_PASSWORD_TITLE,
+        0.5,
+        Some("generated-password-header-text"),
+    );
     let value_label = label_ui(
         GENERATED_PASSWORD_PLACEHOLDER,
         0.5,
@@ -35,5 +39,9 @@ pub fn build() -> GeneratedPasswordComponent {
     root.append(&header);
     root.append(&row);
 
-    GeneratedPasswordComponent { root, value_label, copy_button }
+    GeneratedPasswordComponent {
+        root,
+        value_label,
+        copy_button,
+    }
 }

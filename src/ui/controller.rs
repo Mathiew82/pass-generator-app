@@ -1,7 +1,7 @@
 use gtk4::prelude::*;
 
-use crate::logic::password;
 use crate::logic::feedback;
+use crate::logic::password;
 use crate::logic::state::PasswordOptions;
 use crate::ui::texts::GENERATED_PASSWORD_PLACEHOLDER;
 

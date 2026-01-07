@@ -1,6 +1,6 @@
+use gtk4::gdk_pixbuf::PixbufLoader;
 use gtk4::prelude::*;
 use gtk4::{Adjustment, Align, Box, Button, CheckButton, Image, Label, SpinButton};
-use gtk4::gdk_pixbuf::PixbufLoader;
 
 use crate::ui::texts::*;
 

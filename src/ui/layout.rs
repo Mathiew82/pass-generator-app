@@ -1,10 +1,10 @@
-use crate::ui::styles::display_ui;
-use crate::ui::widgets::*;
-use crate::ui::texts::*;
-use crate::ui::controller;
 use crate::ui::components::generated_password;
 use crate::ui::components::options_panel;
 use crate::ui::components::security_feedback;
+use crate::ui::controller;
+use crate::ui::styles::display_ui;
+use crate::ui::texts::*;
+use crate::ui::widgets::*;
 
 use gtk4::prelude::*;
 use gtk4::{Align, Application, ApplicationWindow};
@@ -22,10 +22,7 @@ pub fn build_ui(app: &Application) {
     let generated = generated_password::build();
     let feedback = security_feedback::build();
 
-    controller::connect_copy_button(
-        &generated.copy_button,
-        &generated.value_label
-    );
+    controller::connect_copy_button(&generated.copy_button, &generated.value_label);
 
     controller::connect_generate_button(
         &generate_button,
