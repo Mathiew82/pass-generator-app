@@ -77,8 +77,8 @@ pass-generator-app/
 
 ### Versiones Disponibles
 
-- **Windows**:
-- **Linux**:
+- **Windows**: [download](https://sourceforge.net/projects/pass-generator-app/files/Pass_Generator_App-Windows.zip/download)
+- **Linux**: [download](https://sourceforge.net/projects/pass-generator-app/files/Pass_Generator_App-x86_64-Linux.tar.xz/download)
 
 ## Licencia
 
