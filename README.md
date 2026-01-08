@@ -1,4 +1,4 @@
-<p align="center"><img src="screenshot.png" alt="Screenshot"></p>
+<div align="center"><img src="screenshot.png" alt="Screenshot"></div>
 
 [![Download Pass Generator App](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
 
