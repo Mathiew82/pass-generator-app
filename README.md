@@ -8,7 +8,7 @@ Una aplicación sencilla para generar **contraseñas seguras** para tus cuentas.
 
 ## Características
 
-- 🔐 **Generación de contraseñas personalizables**: Elige la longitud y los tipos de caracteres (mayúsculas, minúsculas, números, símbolos).
+- 🔐 **Generación de contraseñas personalizables**: Elige la longitud y los tipos de caracteres.
 - 🛡️ **Feedback de seguridad**: Evaluación automática del nivel de seguridad de la contraseña generada.
 - 🖥️ **Interfaz gráfica intuitiva**: Construida con GTK4 para una experiencia de usuario fluida.
 - 🆓 **Totalmente gratuita**: Licenciada bajo MIT.
