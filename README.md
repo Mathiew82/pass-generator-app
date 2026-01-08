@@ -1,7 +1,6 @@
 <p align="center"><img src="screenshot.png" alt="Screenshot"></p>
 
 [![Download Pass Generator App](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
-[![Download Pass Generator App](https://img.shields.io/sourceforge/dt/pass-generator-app.svg)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
 
 # Pass Generator App
 
