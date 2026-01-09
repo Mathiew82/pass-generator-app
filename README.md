@@ -1,7 +1,9 @@
 <div align="center"><img src="https://raw.githubusercontent.com/Mathiew82/pass-generator-app/main/screenshot.png" alt="Screenshot"></div>
 
 <div align="center">
-    [![Download Pass Generator App](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
+
+[![Download Pass Generator App](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
+
 </div>
 
 # Pass Generator App
