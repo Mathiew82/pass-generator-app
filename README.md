@@ -1,9 +1,6 @@
 <div align="center"><img src="https://raw.githubusercontent.com/Mathiew82/pass-generator-app/main/screenshot.png" alt="Screenshot"></div>
 
 <div align="center">
-
-[![Download Pass Generator App](https://a.fsdn.com/con/app/sf-download-button)](https://sourceforge.net/projects/pass-generator-app/files/latest/download)
-
 </div>
 
 # Pass Generator App
@@ -81,8 +78,8 @@ pass-generator-app/
 
 ### Versiones Disponibles
 
-- **Windows**: [download](https://sourceforge.net/projects/pass-generator-app/files/Pass_Generator_App-Windows.zip/download)
-- **Linux**: [download](https://sourceforge.net/projects/pass-generator-app/files/Pass_Generator_App-x86_64-Linux.tar.xz/download)
+- **Windows**: muy pronto
+- **Linux**: muy pronto
 
 ## Licencia
 
