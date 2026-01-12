@@ -1,8 +1,5 @@
 <div align="center"><img src="https://raw.githubusercontent.com/Mathiew82/pass-generator-app/main/screenshot.png" alt="Screenshot"></div>
 
-<div align="center">
-</div>
-
 # Pass Generator App
 
 Una aplicación sencilla para generar **contraseñas seguras** para tus cuentas. **Desarrollada en Rust** con el objetivo de ser **práctica, clara y eficiente**.
@@ -78,8 +75,8 @@ pass-generator-app/
 
 ### Versiones Disponibles
 
-- **Windows**: muy pronto
-- **Linux**: muy pronto
+- **Windows**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Windows.zip)
+- **Linux**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Linux.tar.xz)
 
 ## Licencia
 
