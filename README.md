@@ -79,8 +79,8 @@ pass-generator-app/
 
 ### Versiones Disponibles
 
-- **Windows**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Windows.zip)
-- **Linux**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Linux.tar.xz)
+- **Windows (64 bits)**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Windows.zip)
+- **Linux (x86_64)**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Linux.tar.xz)
 
 ## Licencia
 
