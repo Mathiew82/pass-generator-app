@@ -4,10 +4,6 @@
 
 Una aplicación sencilla para generar **contraseñas seguras** para tus cuentas. **Desarrollada en Rust** con el objetivo de ser **práctica, clara y eficiente**.
 
-> [!IMPORTANT]  
-> Si descargas la **versión de Windows**, es muy posible que te aparezca un aviso diciendo que se detectó una amenaza del archivo .exe. El mensaje dice "**Trojan:Win32/Wacatac.B!ml**". Estoy trabajando para tratar de evitar este mensaje. He enviado el archivo a Microsoft para que ellos mismos lo analicen y descarten la amenaza. **El archivo no tiene peligro alguno**, pero al utilizar el copiar al portapapeles y ser un programa nada conocido y muy nuevo, saltan las alarmas! xD
-> Puedes descargarlo sin miedo alguno 😉
-
 ## Características
 
 - 🔐 **Generación de contraseñas personalizables**: Elige la longitud y los tipos de caracteres.
@@ -81,6 +77,10 @@ pass-generator-app/
 
 - **Windows (64 bits)**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Windows.zip)
 - **Linux (x86_64)**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Linux.tar.xz)
+
+> [!IMPORTANT]  
+> Si descargas la **versión de Windows**, es muy posible que te aparezca un aviso diciendo que se detectó una amenaza del archivo .exe. El mensaje dice "**Trojan:Win32/Wacatac.B!ml**". Estoy trabajando para tratar de evitar este mensaje. He enviado el archivo a Microsoft para que ellos mismos lo analicen y descarten la amenaza. **El archivo no tiene peligro alguno**, pero al utilizar el copiar al portapapeles y ser un programa nada conocido y muy nuevo, saltan las alarmas! xD
+> Puedes descargarlo sin miedo alguno 😉
 
 ## Licencia
 
