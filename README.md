@@ -79,8 +79,7 @@ pass-generator-app/
 - **Linux (x86_64)**: [Descargar](https://github.com/Mathiew82/pass-generator-app/releases/download/v1.0.0/Pass_Generator_App-1.0.0-Linux.tar.xz)
 
 > [!IMPORTANT]  
-> Si descargas la **versión de Windows**, es muy posible que te aparezca un aviso diciendo que se detectó una amenaza del archivo .exe. El mensaje dice "**Trojan:Win32/Wacatac.B!ml**". Estoy trabajando para tratar de evitar este mensaje. He enviado el archivo a Microsoft para que ellos mismos lo analicen y descarten la amenaza. **El archivo no tiene peligro alguno**, pero al utilizar el copiar al portapapeles y ser un programa nada conocido y muy nuevo, saltan las alarmas! xD
-> Puedes descargarlo sin miedo alguno 😉
+> Si descargas la **versión de Windows**, es muy posible que te aparezca un aviso diciendo que se detectó una amenaza del archivo .exe. El mensaje dice "***Trojan:Win32/Wacatac.B!ml***". **El archivo no tiene peligro alguno**, pero al utilizar el portapapeles y ser un programa muy nuevo y nada conocido, hace que haya esta interpretación por parte de algunos antivirus. Puedes preguntar a la IA acerca de esta situación con programas de Rust, por lo visto es bastante común. Puedes descargarlo sin miedo alguno 😉
 
 ## Licencia
 
